@@ -24,20 +24,23 @@ First install:
 
 Then put this as early as you can in your project:
 
-    require('exjs').install()
+```js
+require('exjs').load([
+  "array/find",
+  "date/format",
+  "function/papp",
+  "function/throttle",
+  "global/inspect",
+  // etc.
+])
+```
 
-Lastly, add the `exjs` key to your `package.json` with an array as its value. Example:
+Alternatively, you can load each file individually:
 
-```json
-{
-  "name": "my-awesome-project",
-  ...,
-  "exjs": [
-    "function/papp",
-    "function/throttle",
-    "global/inspect",
-  ]
-}
+```js
+require('exjs/array/find')
+require('exjs/date/format')
+// etc.
 ```
 
 Read on for documentation on each module.

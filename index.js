@@ -1,18 +1,12 @@
 
-exports.install = function () {
-  // Assume we're in the project/node_modules/exjs folder
-  var package = require('../../package.json')
+exports.load = function (modules) {
 
-  if ( ! package.exjs ) {
-    console.warning("[exjs] WARNING: No `exjs` key in package.json")
-    return
-  }
-  if ( ! Array.isArray(package.exjs) ) {
-    console.error("[exjs] Error: The value of `exjs` in package.json must be an array of strings.")
+  if ( ! Array.isArray(modules) ) {
+    console.error("[exjs] Error: The argument to `.load()` must be an array of strings.")
     return
   }
 
-  package.exjs.forEach(function (ex) {
+  modules.forEach(function (ex) {
     require('./' + ex)
   })
 }
