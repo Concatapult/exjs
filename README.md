@@ -45,6 +45,19 @@ require('exjs/date/format')
 
 Read on for documentation on each module.
 
+### `array/find`
+
+A polyfill based on the [MDN implementation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill). Useful when including for client apps targeting older browsers.
+
+### `date/format`
+
+A handly function for formatting JavaScript dates. [Click here](date/format.md) for full docs on usage.
+
+```javascript
+var myDate = new Date('3/20/2018');
+myDate.format('M jS, Y') //=> "Mar 20th, 2018"
+```
+
 ### `function/papp` and `function/pappRight`
 
 This function gives you quick and easy partial application. See [this repo](https://github.com/mindeavor/es-papp) for examples and documentaton.
