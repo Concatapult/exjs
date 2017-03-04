@@ -6,12 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exjs": [
-    "function/papp",
-    "function/pappRight",
-    "function/throttle",
-    "global/inspect"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC"

@@ -1,6 +1,7 @@
 
 exports.install = function () {
-  var package = require('./package.json')
+  // Assume we're in the project/node_modules/exjs folder
+  var package = require('../../package.json')
 
   if ( ! package.exjs ) {
     console.warning("[exjs] WARNING: No `exjs` key in package.json")
