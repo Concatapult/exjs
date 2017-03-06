@@ -1,10 +1,10 @@
 
-module.exports = function (prototype, func) {
+module.exports = function (prototype, name, func) {
 
   // Don't override existing definitions
-  if ( prototype[func.name] ) return;
+  if ( prototype[name] ) return;
 
-  Object.defineProperty(prototype, func.name, {
+  Object.defineProperty(prototype, name, {
     value: func,
     writable: true,
     configurable: true,

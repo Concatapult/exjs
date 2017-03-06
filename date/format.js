@@ -1,7 +1,7 @@
 //
 // Taken from https://github.com/jacwright/date.format
 //
-require('../ex')(Date.prototype, function format (formatString) {
+require('../ex')(Date.prototype, 'format', function format (formatString) {
   var date = this;
   return formatString.replace(/(\\?)(.)/g, function(_, esc, chr) {
     return (esc === '' && replaceChars[chr]) ? replaceChars[chr].call(date) : chr;

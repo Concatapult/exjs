@@ -3,7 +3,7 @@
 // threshhold - Time to wait before making next call
 // explicitContext - Your parameter `this`
 //
-require('../ex')(Function.prototype, function throttle (waittime, threshhold, explicitContext) {
+require('../ex')(Function.prototype, 'throttle', function throttle (waittime, threshhold, explicitContext) {
   threshhold || (threshhold = 250);
   var fn = this
   var last, deferTimer

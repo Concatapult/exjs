@@ -1,7 +1,7 @@
 //
 // Polyfill taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill
 //
-require('../ex')(Array.prototype, function find (predicate) {
+require('../ex')(Array.prototype, 'find', function find (predicate) {
   // 1. Let O be ? ToObject(this value).
   if (this == null) {
     throw new TypeError('"this" is null or not defined');
