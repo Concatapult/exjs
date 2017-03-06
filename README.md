@@ -120,3 +120,28 @@ This is useful when you want a quick debug on callback, such as a promise:
 ```js
 fetchItems().then( inspect('items') )
 ```
+
+### `object/pick`
+
+Makes available the `Object.pick` function, which picks an array of properties from a given object.
+
+```js
+var original = { x: 10, y: 20, z: 30 }
+
+var picked = Object.pick(['x', 'z'], original)
+picked //=> { x: 10, z: 30 }
+```
+
+If you only give the first argument `Object.pick`, then it returns a function that expects the second argument:
+
+```js
+var pick2dCoords = Object.pick(['x', 'y'])
+
+pick2dCoords({ x: 10, y: 20, z: 30 }) //=> { x: 10, y: 20 }
+
+arrayOfCoords.map( pick2dCoords ) // Another example
+
+
+fetchItem()
+  .then( Object.pick(['name', 'price']) ) // Inline usage
+```
